@@ -5,7 +5,19 @@
 }
 
 body {
-  min-height: 100%;
+  min-height: 100vh;
+}
+
+header {
+  min-height: 10vh;
+}
+
+main {
+  min-height: 85vh;
+}
+
+footer {
+  min-height: 5vh;
 }
 
 .top-header {
@@ -20,8 +32,8 @@ body {
 
 #title {
   display: inline-block;
-  position: absolute;
-  left: 45%;
+  text-align: center;
+  width: 95%;
 }
 
 nav {
@@ -106,7 +118,7 @@ footer {
 }
 
 #top-section-about h2 {
-  margin: 35px;
+  padding-top: 25px;
 }
 
 #top-section-about p {
