@@ -1,147 +1,216 @@
+/* NORMALIZE CSS */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
   min-height: 100vh;
-}
-
-header {
-  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(25, 26, 31); */
 }
 
 main {
-  min-height: 85vh;
+  flex-grow: 1;
 }
 
-footer {
-  min-height: 5vh;
+header {
+  display: flex;
+  flex-direction: column;
 }
 
 .top-header {
-  padding: 10px;
-  background-color: rgb(61, 61, 61);
+  display: flex;
+  justify-content: center;
   position: relative;
+  padding: 10px;
 }
 
 #logo {
-  display:inline-block;
-}
-
-#title {
-  display: inline-block;
-  text-align: center;
-  width: 95%;
+  position: absolute;
+  left: 20px;
+  top: 20px;
 }
 
 nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
   padding: 10px;
-  background-color: rgb(90, 90, 90);
-  text-align: center;
 }
 
 nav > a {
   text-decoration: none;
-  margin-right: 10px
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.focus {
+  color: black;
+}
+
+nav a:hover {
+  color: black;
+  transition: all .3s linear;
 }
 
 .top-section {
-  padding: 200px;
-  background-color: rgb(105, 105, 105);
+  border-radius: 0px 0px 30px 30px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+  height: 80vh;
+  color: white;
+  background-image: url('../assets/sport-img.jpg');
+}
+
+.top-section h2 {
+  font-size: 3vw;
+}
+
+.top-section p {
+  width: 50ch;
+  font-size: 1vw;
 }
 
 .products {
   padding: 25px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.products h3 {
+.products-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 90px;
+}
+
+h3 {
   text-align: center;
   margin: 10px 0px;
   margin-bottom: 30px;
 }
 
-.products > article {
-  border: 1px solid rgb(151, 151, 151);
-  border-radius: 5px;
-  width: 400px;
-  height: fit-content;
-  display: inline-block;
-  padding:  10px 30px;
-  margin: 0px 8px;
-  text-align: center;
+.product-card {
+  border-radius: 10px;
+  min-height: 350px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-.products > article > * {
-  margin-bottom: 10px;
+.product-card p {
+  width: 50ch;
+  font-size: 12px;
+  color: rgb(70, 70, 70);
 }
 
-.products > article > a {
-  display: inline-block;
-  margin-top: 20px;
+.product-card img {
+  width: 300px;
+}
+
+.product-card > a {
   text-decoration: none;
-  color: white;
-  background-color: rgb(54, 54, 54);
+  color: rgba(0, 0, 0, 0.705);
   padding: 6px 10px;
-  border-radius: 5px;
+  width: fit-content;
+  border: 3px solid #7D6096;
+}
+
+.product-card > a:hover {
+  background-color: #7D6096;
+  color: white;
+  transition: all .2s linear;
 }
 
 .categories {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: center;
+  gap: 120px
+}
+
+.categories img {
+  width: 300px;
 }
 
 .categories > h2 {
   text-align: center;
 }
 
-.categories > article {
-  display: inline-block;
+.categories article {
   text-align: center;
-  margin: 50px;
 }
 
 footer {
-  background-color: rgb(92, 92, 92);
   text-align: center;
-  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  padding: 10px;
+  background-color: #231435;
+  margin-top: 25px;
+  color: white;
 }
 
 /* ABOUT US SECTION */
 
 #top-section-about {
   text-align: center;
-  padding: 0px 70px;
-}
-
-#top-section-about h2 {
-  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  align-items: center;
 }
 
 #top-section-about p {
-  padding: 0 50px;
+  width: 90ch;
 }
 
 #team-section {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.team-container article {
+  padding: 30px 15px;
+  box-shadow: 2px 10px 20px 5px #d7d7d785;
 }
 
 #team-section h2 {
   margin: 35px;
 }
 
-#team-section > article {
-  display: inline-block;
-}
-
-#team-section > article > * {
+#team-section article * {
   margin-bottom: 10px;
 }
 
-#team-section > article > img {
+#team-section article img {
   border-radius: 100%;
 }
 
@@ -151,12 +220,92 @@ footer {
 
 #values-section {
   text-align: center;
-}
-
-#values-section h2 {
-  margin: 35px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
 }
 
 #values-section li {
   margin-bottom: 10px;
+}
+
+/* PRODUCTS PAGE */
+
+aside {
+  padding: 0px 50px;
+  border-right: 1px solid rgb(194, 194, 194, .5);
+  height: fit-content;
+  width: 320px;
+}
+
+aside ul {
+  list-style: none;
+}
+
+.subcategory li:hover {
+  transition: all .1s linear;
+  color: black;
+  background-color: #7d60963a;
+}
+
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.subcategory {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.subcategory li {
+  color: rgba(133, 133, 133, 0.685);
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.big-products-container {
+  display: flex;
+  gap: 20px;
+}
+
+.big-products-container h2 {
+  margin-bottom: 10px;
+}
+
+.products-main {
+  flex-grow: 1;
+  padding: 0px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.products-cont {
+  justify-content: start;
+  gap: 30px;
+}
+
+table {
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table * {
+  padding: 10px 60px;
+  border: 1px solid rgba(202, 202, 202, 0.514);
+}
+
+table th {
+  background-color: #7d6096d0;
+  color: white;
 }
