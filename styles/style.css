@@ -18,9 +18,19 @@ main {
   flex-grow: 1;
 }
 
+.index-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 header {
   display: flex;
   flex-direction: column;
+}
+
+h2 {
+  font-size: xx-large;
 }
 
 .top-header {
@@ -58,7 +68,6 @@ nav a:hover {
 }
 
 .top-section {
-  border-radius: 0px 0px 30px 30px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -67,17 +76,30 @@ nav a:hover {
   gap: 15px;
   position: relative;
   height: 80vh;
+  width: 80%;
   color: white;
-  background-image: url('../assets/sport-img.jpg');
+  background-image: url('../assets/kettlebell-gym-equipment-still-life-crop.jpg');
+}
+
+.opacity-box {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.849) 100%);
+  backdrop-filter: blur(5px);
+  z-index: 0;
 }
 
 .top-section h2 {
   font-size: 3vw;
+  z-index: 1;
 }
 
 .top-section p {
   width: 50ch;
   font-size: 1vw;
+  z-index: 1;
 }
 
 .products {
@@ -108,6 +130,8 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
+  align-items: center;
+  text-align: center;
 }
 
 .product-card p {
@@ -151,7 +175,7 @@ h3 {
   width: 300px;
 }
 
-.categories > h2 {
+.categories > h3 {
   text-align: center;
 }
 
@@ -167,11 +191,18 @@ footer {
   width: 100%;
   padding: 10px;
   background-color: #231435;
-  margin-top: 25px;
+  margin-top: 35px;
   color: white;
 }
 
 /* ABOUT US SECTION */
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
 
 #top-section-about {
   text-align: center;
@@ -179,10 +210,26 @@ footer {
   flex-direction: column;
   margin-top: 20px;
   align-items: center;
+  background-image: url("../assets/work-team-digital-art.jpg");
+  height: 80vh;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  width: 80%;
+  position: relative;
+}
+
+#top-section-about h2 {
+  z-index: 1;
+  color: white;
+  font-size: xxx-large;
 }
 
 #top-section-about p {
   width: 90ch;
+  font-size: 20px;
+  color: white;
+  z-index: 1;
 }
 
 #team-section {
@@ -194,16 +241,19 @@ footer {
 .team-container {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 25px;
+  align-items: center;
 }
 
 .team-container article {
   padding: 30px 15px;
   box-shadow: 2px 10px 20px 5px #d7d7d785;
+  height: fit-content;
+  background: linear-gradient(white 0%, #5d54c826 100%);
 }
 
-#team-section h2 {
-  margin: 35px;
+#founder {
+  padding: 50px 25px;
 }
 
 #team-section article * {
@@ -219,21 +269,33 @@ footer {
 }
 
 #values-section {
-  text-align: center;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  align-items: center;
   gap: 20px;
 }
 
 #values-section li {
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  /* width: 600px; */
+  gap: 40px;
+}
+
+#values-section p {
+  width: 40ch;
+}
+
+#values-section img {
+  box-shadow: 18px 18px 1px 6px #9442cc;
+  filter: brightness(.7);
 }
 
 /* PRODUCTS PAGE */
 
 aside {
-  padding: 0px 50px;
+  padding: 0px 60px;
   border-right: 1px solid rgb(194, 194, 194, .5);
   height: fit-content;
   width: 320px;
@@ -292,7 +354,7 @@ aside ul {
 
 .products-cont {
   justify-content: start;
-  gap: 30px;
+  gap: 50px;
 }
 
 table {
