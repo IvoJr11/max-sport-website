@@ -371,3 +371,66 @@ table th {
   background-color: #7d6096d0;
   color: white;
 }
+
+/* CONTACT PAGE */
+
+#contact-main {
+
+}
+
+#contact-main-container {
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 100vh;
+}
+
+form {
+  width: 40%;
+}
+
+iframe {
+  height: 500px;
+  width: 40%;
+}
+
+input[type=text] {
+  padding: 10px;
+  width: 100%;
+}
+
+input[type=submit], input[type=reset] {
+  width: 49%;
+  padding: 5px;
+}
+
+textarea {
+  width: 100%;
+}
+
+#categories-field {
+  width: 100%;
+  border: none;
+  padding: 5px;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.categories-container label {
+
+}
+
+
+/* form {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* @media (min-width: 375px) and (max-width: 685px) {
+} 
+
+@media (min-width: 686px) and (max-width: 1024px) {
+}
+*/
