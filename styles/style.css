@@ -375,17 +375,25 @@ table th {
 /* CONTACT PAGE */
 
 #contact-main {
+  display: flex;
+  flex-direction: column;
+}
 
+#contact-main h2 {
+  text-align: center;
+  margin: 30px;
 }
 
 #contact-main-container {
   display: flex;
   justify-content: space-evenly;
-  min-height: 100vh;
 }
 
 form {
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 iframe {
@@ -398,19 +406,29 @@ input[type=text] {
   width: 100%;
 }
 
-input[type=submit], input[type=reset] {
-  width: 49%;
-  padding: 5px;
+input[type="checkbox"], input[type="radio"] {
+  height: 25px;
+  width: 25px;
 }
 
 textarea {
   width: 100%;
+  padding: 30px 0px;
 }
 
 #categories-field {
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px 20px;
   border: none;
-  padding: 5px;
+}
+
+#categories-field label {
+  display: flex;
+  flex: 0 0 20%;
+  align-items: center;
+  gap: 8px;
 }
 
 .categories-container {
@@ -418,19 +436,39 @@ textarea {
   justify-content: space-between;
 }
 
-.categories-container label {
-
+#suscribe-fieldset {
+  border: none;
+  display: flex;
+  width: fit-content;
+  justify-content: space-evenly;
+  gap: 130px;
 }
 
-
-/* form {
+#suscribe-fieldset label {
   display: flex;
-  flex-direction: column;
-} */
+  align-items: center;
+  gap: 5px;
+}
 
-/* @media (min-width: 375px) and (max-width: 685px) {
-} 
+input[type=submit], input[type=reset] {
+  padding: 10px 140px;
+  border: none;
+  background-color: #7D6096;
+  color: white;
+  cursor: pointer;
+}
 
-@media (min-width: 686px) and (max-width: 1024px) {
+#buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* @media (max-width: 480px) {
+  } 
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
 }
 */
